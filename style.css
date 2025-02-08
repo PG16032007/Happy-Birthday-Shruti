@@ -1,0 +1,120 @@
+/* PINK BACKGROUND FOR FIRST PAGE */
+body.pink-bg {
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* FLOATING HEART BALLOONS */
+body.heart-bg {
+    background: url('hearts-bg.gif') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+.heart {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: red;
+    clip-path: polygon(50% 0%, 100% 40%, 75% 100%, 50% 80%, 25% 100%, 0% 40%);
+    animation: float 6s infinite;
+}
+
+/* CENTERING CONTENT */
+.container {
+    text-align: center;
+}
+
+/* BUTTON STYLE */
+button {
+    padding: 20px 40px;
+    font-size: 22px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: darkred;
+}
+
+/* ANIMATED CAKE */
+.cake {
+    width: 200px;
+    height: 150px;
+    background: #ffcccb;
+    margin: auto;
+    position: relative;
+}
+
+.layer {
+    width: 100%;
+    height: 50px;
+    background: #ff9999;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.layer:nth-child(1) { top: 0; }
+.layer:nth-child(2) { top: 50px; }
+.layer:nth-child(3) { top: 100px; }
+
+/* CANDLES */
+.candles {
+    display: flex;
+    justify-content: center;
+    margin-top: -30px;
+}
+
+.candles div {
+    width: 10px;
+    height: 40px;
+    background: white;
+    margin: 0 5px;
+    position: relative;
+}
+
+.flame {
+    width: 10px;
+    height: 20px;
+    background: orange;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    animation: flicker 1s infinite alternate;
+}
+
+/* FLAME ANIMATION */
+@keyframes flicker {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0.6; transform: scale(1.2); }
+}
+
+/* ROMANTIC BACKGROUND */
+body.romantic-bg {
+    background: url('romantic-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.message-container {
+    margin-top: 20%;
+    font-size: 24px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}

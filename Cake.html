@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Cake</title>
+    <link rel="stylesheet" href="style.css">
+    <audio id="birthdaySong" autoplay>
+        <source src="happy_birthday.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        window.onload = function() {
+            document.getElementById("birthdaySong").play();
+            setTimeout(function() {
+                document.getElementById("click-again").style.display = "block";
+            }, 5000); // Show "Click Here Again" after 5 seconds
+        };
+    </script>
+</head>
+<body class="cake-page">
+
+    <div class="container">
+        <!-- 🎂 Animated Cake -->
+        <div class="cake">
+            <div class="layer layer-bottom"></div>
+            <div class="layer layer-middle"></div>
+            <div class="layer layer-top"></div>
+            <div class="icing"></div>
+            <div class="candle">
+                <div class="flame"></div>
+            </div>
+        </div>
+
+        <!-- 🔥 "Click Here Again" Button (Appears after 5 secs) -->
+        <a id="click-again" href="message.html">Click Here Again Birthday Girl</a>
+    </div>
+
+</body>
+</html>
